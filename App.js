@@ -4,13 +4,13 @@ import { StyleSheet, Text, TextInput, Button, View } from 'react-native';
 export default function App() {
   return (
 
-    // this is all done w/ inline styling so far
-    <View style={{ padding: 50 }}>
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-        <TextInput 
-          placeholder="Course Goals" 
-          style={{ borderColor: 'gold', borderWidth: 2, padding: 10, width: '80%' }}/>
-        <Button title ="ADD" />
+
+    <View style={styles.screen}>
+      <View style={styles.inputContainer}>
+        <TextInput
+          placeholder="Course Goals"
+          style={styles.input} />
+        <Button title="ADD" />
       </View>
       <View>
 
@@ -19,7 +19,20 @@ export default function App() {
     </View>
   );
 }
-
+// now using stylesheet object styling
 const styles = StyleSheet.create({
-  
+  screen: {
+    padding: 50
+  },
+  inputContainer: {
+    flexDirection: 'row', 
+    justifyContent: 'space-between', 
+    alignItems: 'center'
+  },
+  input: {
+    borderColor: 'black', 
+    borderWidth: 2, 
+    padding: 10, 
+    width: '80%' 
+  }
 });
